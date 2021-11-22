@@ -1,9 +1,9 @@
-[submodule "starter-service-server"]
-	path = starter-service-server
-	url = https://github.com/logeshdinahypto/starter-service-server.git
 [submodule "starter-service-kotlin-client"]
 	path = starter-service-kotlin-client
-	url = https://github.com/logeshdinahypto/starter-service-kotlin-client.git
+	url = https://github.com/hwslabs/starter-service-kotlin-client.git
+[submodule "starter-service-server"]
+	path = starter-service-server
+	url = https://github.com/hwslabs/starter-service-server.git
 [submodule "starter-service-infrastructure"]
 	path = starter-service-infrastructure
-	url = https://github.com/logeshdinahypto/starter-service-infrastructure.git
+	url = https://github.com/hwslabs/starter-service-infrastructure.git
