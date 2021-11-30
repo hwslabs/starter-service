@@ -5,9 +5,11 @@ set -e
 echo "Initializing the infrastructure project..."
 pushd {TEMPLATE_SERVICE_HYPHEN_NAME}-service-infrastructure
 npm install
+npm install -g ts-node
+npm install -g aws-cdk
 
 echo "Creating ECR repo in AWS..."
-npm run cdk deploy repo
+cdk deploy repo --require-approval=never
 export DOCKER_REGISTRY=$(aws cloudformation describe-stacks --stack-name repo | jq --raw-output '.Stacks | .[] | .Outputs | reduce .[] as $i ({}; .[$i.OutputKey] = $i.OutputValue) | .RepositoryURI' | cut -d / -f 1)
 popd
 
@@ -20,5 +22,5 @@ popd
 
 echo "Deploying the server container to ECS & Fargate in AWS..."
 pushd {TEMPLATE_SERVICE_HYPHEN_NAME}-service-infrastructure
-npm run cdk deploy service
+cdk deploy service --require-approval=never
 popd
