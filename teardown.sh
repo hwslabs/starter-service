@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Tearing down the server infrastructure in AWS..."
-pushd {SERVICE_HYPHEN_NAME}-service-infrastructure
+pushd {TEMPLATE_SERVICE_HYPHEN_NAME}-service-infrastructure
 npm install
 npm run cdk destroy service
 
