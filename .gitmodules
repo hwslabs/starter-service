@@ -7,3 +7,6 @@
 [submodule "starter-infrastructure"]
 	path = starter-infrastructure
 	url = https://github.com/hwslabs/starter-infrastructure.git
+[submodule "starter-service-models"]
+	path = starter-service-models
+	url = https://github.com/hwslabs/starter-service-models.git
